@@ -22,11 +22,13 @@ public class Database {
     private final BorrowDao borrowDao;
     private final ActivityDao activityDao;
     private final ReportDao reportDao;
+    private final UserDao userDao;
 
     public Database() {
         this.borrowDao = new MySqlBorrowDao();
         this.activityDao = new MySqlActivityDao();
         this.reportDao = new MySqlReportDao();
+        this.userDao = new MySqlUserDao();
     }
 
     public List<BorrowRecord> getAllBorrowRecords() throws SQLException {
